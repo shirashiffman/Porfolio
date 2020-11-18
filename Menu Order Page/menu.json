@@ -1,0 +1,61 @@
+[
+    {
+        "name":"Caesar Salad - Dairy",
+        "price": "16.99",
+        "imageSrc":"images/caesar.jpg"
+    },
+    {
+        "name":"Summer Salad",
+        "price": "15.99",
+        "imageSrc":"images/summerSalad.jpg"
+    },
+    {
+        "name":"Greek Salad - Dairy",
+        "price": "14.95",
+        "imageSrc":"images/greekSalad.jpg"
+    },
+    {
+        "name":"Raindbow Salad",
+        "price": "16.25",
+        "imageSrc":"images/rainbowSalad.jpg"
+    },
+    {
+        "name":"Strawberry Smoothie",
+        "price": "7.99",
+        "imageSrc":"images/strawberrySmoothie.jpg"
+    },
+    {
+        "name":"Pineapple Smoothie",
+        "price": "5.99",
+        "imageSrc":"images/pineappleSmoothie.jpg"
+    },
+    {
+        "name":"Raspberry Smoothie",
+        "price": "6.95",
+        "imageSrc":"images/raspberrySmoothie.jpg"
+    },
+    {
+        "name":"Avocado Smoothie",
+        "price": "9.25",
+        "imageSrc":"images/avocadoSmoothie.jpg"
+    },
+    {
+        "name":"Chocolate Chip Muffin",
+        "price": "3.99",
+        "imageSrc":"images/chocolatechip.jpg"
+    },
+    {
+        "name":"Blueberry Muffin",
+        "price": "3.49",
+        "imageSrc":"images/blueberryMuffin.jpg"
+    },
+    {
+        "name":"Coffee Crumb Muffin",
+        "price": "2.95",
+        "imageSrc":"images/coffeecrumb.jpg"
+    },{
+        "name":"Double Chocolate Chip Muffin",
+        "price": "3.25",
+        "imageSrc":"images/doublechocolate.jpg"
+    }
+]

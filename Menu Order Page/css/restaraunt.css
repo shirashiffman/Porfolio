@@ -1,0 +1,238 @@
+body {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  padding: 2em 2em 2em 2em;
+}
+
+img {
+  height: 150px;
+}
+
+h1 {
+  background-color: white;
+  font-size: 1.25em;
+}
+
+h1 a {
+  padding-left: 2em;
+  
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+nav li {
+  display: inline;
+  margin-left: 4em;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 0.75em;
+}
+
+#logo {
+  height: 55px;
+  margin-left: 3em;
+  margin-top: -2em;
+  position: absolute;
+  left: 200px;
+  top: 45px;
+}
+
+p {
+  color: darkslategray;
+}
+
+h2 {
+  margin-top: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(66, 160, 34);
+  font-size: 4em;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 2px 4px rgba(149, 222, 89);
+  margin-bottom: -0.5em;
+  font-family: "Euphoria Script", cursive;
+}
+
+h3 {
+  color: rgba(149, 222, 89);
+  font-size: 1em;
+  text-align: center;
+  font-style: italic;
+  font-family: "caskingCream";
+  padding: 1.5em;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+a:hover,
+a:focus,
+a:active {
+  opacity: 0.6;
+}
+
+#map {
+  float: right;
+  width: 350px;
+  height: 300px;
+  border: 5px solid rgba(149, 222, 89);
+  border-radius: 25px;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+img {
+  text-align: center;
+}
+
+.contact {
+  text-align: justify;
+  margin-right: 400px;
+}
+
+a {
+  font-size: 1.5em;
+}
+
+.homePic {
+  width: 250px;
+  height: 200px;
+  border: 5px solid rgba(149, 222, 89);
+  border-radius: 25px;
+  margin: auto;
+}
+
+#pictureDiv {
+  padding-left: 85px;
+}
+
+.homeDiv{
+  width: 787px;
+  margin: auto;
+  
+}
+
+.homeDiv:not(:first-of-type){
+  margin-left: 25px;
+}
+
+
+#p1 {
+  padding-right: 6em;
+  padding-left: 6em;
+  padding-top: 2em;
+  text-align: justify;
+}
+
+#storeHours {
+  float: left;
+  margin-right: 35px;
+}
+
+.images {
+  padding-left: 80px;
+}
+
+#aboutText {
+  padding: 2em 2em 2em 2em;
+  text-align: justify;
+}
+
+video {
+  margin-top: 1em;
+  border: 5px solid rgba(149, 222, 89);
+  border-radius: 25px;
+  width: 800px;
+  margin: auto;
+}
+audio {
+  margin-top: 1em;
+  border: 5px solid rgba(149, 222, 89);
+  border-radius: 25px;
+  width: 800px;
+  margin: auto;
+}
+
+.mediaDiv{
+  width: 810px;
+  margin: auto;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  padding-top: 1em;
+  text-align: center;
+  height 100px;
+}
+
+.aboutImagesDiv{
+  width: 787px;
+  margin: auto;
+}
+
+.clearFix {
+  clear: both;
+}
+@font-face {
+  font-family: "caskingCream";
+  src: url("/caskingCream.ttf");
+  font-display: swap;
+}
+
+@media screen and (max-width: 799px) {
+  body {
+    max-width: 80%;
+  }
+  #logo {
+    top: 40px;
+    left: -45px;
+    height: 90%;
+    position: absolute;
+  }
+  nav {
+    width: 80%;
+  }
+  nav li {
+    margin: 5px;
+  }
+  nav ul {
+    padding: 0;
+  }
+
+  .homeDiv{
+    width: 250px;
+  }
+  video,
+  audio {
+    width: 600px;
+    margin: auto;
+  }
+
+  .contact {
+    margin-right: 0px;
+  }
+
+  .pictureDiv {
+    margin: auto;
+    width: 275px;
+  }
+  .mediaDiv{
+    width: 600px;
+    margin: auto;
+  }
+}

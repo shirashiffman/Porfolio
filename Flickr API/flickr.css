@@ -1,0 +1,106 @@
+
+#modal {
+  background-color: lightblue;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 700px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#modal p {
+  font-size: 1.5em;
+}
+#modal h1 {
+  padding-top: 100px;
+}
+
+#search {
+  text-align: right;
+
+  position: absolute;
+  width: 250px;
+  right: 0;
+}
+
+#picContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: auto;
+}
+
+#picContainer div {
+  height: 150px;
+  width: 200px;
+  box-sizing: border-box;
+  margin: 10px;
+
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgba(133, 208, 233, 0.774);
+  margin-bottom: 2em;
+}
+
+#picContainer div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.pictureTitle {
+  font-size: 0.5em;
+}
+
+#carousel {
+  width: 40%;
+  height: 400px;
+  background-color: lightgray;
+  margin: auto;
+  padding: 5px;
+  margin-top: 15px;
+  position: relative;
+  background-size: cover;
+  border: 3px solid gray;
+  border-radius: 15px;
+}
+
+#rightArrow {
+  height: 50px;
+  position: absolute;
+  right: 300px;
+  bottom: 10px;
+
+
+}
+#leftArrow {
+  height: 50px;
+  position: absolute;
+  left: 300px;
+  bottom: 10px;
+}
+#rightArrow:hover {
+  opacity: 0.5;
+}
+#leftArrow:hover {
+  opacity: 0.5;
+}
+#carouselContainer{
+  display: none;
+  position: relative;
+}
+
+input[type="radio"]{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  
+}
+label:not(:last-child) {
+  padding-right: 2em;
+}
+#numberPicker{
+  margin: auto;
+  width: 350px;
+}

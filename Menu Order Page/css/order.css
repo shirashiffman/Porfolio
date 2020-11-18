@@ -1,0 +1,51 @@
+h2 {
+  margin: 0;
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  padding-top: 1.5em;
+}
+form {
+  width: 65%;
+  margin: auto;
+  border: 2px dashed darkgray;
+  padding: 4em;
+}
+
+input:not([type="checkbox"]),
+textarea {
+  display: block;
+  margin: auto;
+  width: 100%;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+input#submit {
+  width: 200px;
+  margin-top: 2em;
+  font-size: 1em;
+  background-color: rgba(149, 222, 89);
+}
+
+#orderDiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+  justify-content: center;
+}
+
+#orderDiv div {
+  width: 175px;
+}
+
+#orderDiv img {
+  width: 150px;
+}
+
+label h3 {
+  padding: 0.5em;
+}
