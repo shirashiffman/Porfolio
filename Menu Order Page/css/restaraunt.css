@@ -27,7 +27,7 @@ a{
 
 nav li {
   display: inline;
-  margin-left: 4em;
+  padding-left: 4em;
   text-decoration: none;
   list-style-type: none;
   font-size: 0.75em;
@@ -174,10 +174,10 @@ nav {
   left: 0;
   right: 0;
   margin: auto;
-  width: 80%;
+ 
   padding-top: 1em;
   text-align: center;
-  height 100px;
+  height: 75px;
 }
 
 .aboutImagesDiv{

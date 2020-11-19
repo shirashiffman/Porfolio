@@ -2,6 +2,7 @@
 (function(){
     'use strict';
 
+    let ordersPlaced = [];
     class MenuItem{
         constructor(name, price, imageSrc){
             this.name = name;
@@ -15,19 +16,40 @@
     }
 
     class Order{
-        constructor(...items){
-            this.orderItems =items ||[];
+        constructor(customer, ...items){
+            this.customer = customer;
+            // this.name = name;
+            // this.street = street;
+            // this.city = city;
+            // this.state = state;
+            // this.zip = zip;
+            // this.phone = phone;
+            this.items =items ||[];
         }
 
         get total(){
             let total = 0;
-          this.orderItems.forEach((item)=>{
+          this.items.forEach((item)=>{
             total+= item.price;
           });
           return total;
         }
         add(item){
-            this.orderItems.push(item);
+            //this.items = this.items || [];
+            this.items.push(item);
+            
+        }
+    }
+
+    class Customer{
+        constructor(name, street, city, state, zip, phone, email){
+            this.name=name;
+            this.street= street;
+            this.city= city;
+            this.state = state;
+            this.zip = zip;
+            this.phone = phone;
+            this.email = email;
         }
     }
 
@@ -35,7 +57,7 @@
     //console.log(orderTest.getTotal());
     let menuArray = [];
     const list = $('#list');
-    const order = new Order();
+    let order = new Order();
     const cartElem = $('#cartIcon');
 
     fetch("menu.json")
@@ -74,6 +96,79 @@
             console.error(e);
         });
 
+        cartElem.click(()=>{
+            if(order.items.length !== 0){
+                updateOrderForm();
+                $('#modal').show();
+                $('#form').show();
+            }
+        });
+
+        $('#order').click(()=>{
+            //Theoretically would do order submission and have an order confirmation
+            let inputs = $('input');
+            let inputValues = getFields(inputs, "value");
+            let [name, street, city, state, zip, phone, email] = inputValues;
+            order.customer = new Customer(name, street, city, state, zip, phone, email);
+        
+            console.log(order);
+            $('#modal').hide();
+            $('#form').hide();
+           // $('#form').empty();
+           
+            ordersPlaced.push(new Order(order.customer, ...order.items));
+            console.log(ordersPlaced);
+
+           order.items =[];
+           order.customer = [];
+           emptyFields();
+
+        });
+        function getFields(input, field) {
+            var output = [];
+            for (var i=0; i < input.length ; ++i){
+                output.push(input[i][field]);
+            }
+            return output;
+        }
+        function emptyFields() {
+            $('#name').val('');
+            $('#street').val('');
+            $('#city').val('');
+            $('#state').val('');
+            $('#zip').val('');
+            $('#phone').val('');
+            $('#email').val('');
+        }
+
+        $('#cancel').click(()=>{
+            $('#modal').hide();
+            $('#form').hide();
+        });
+
+        function updateOrderForm(){
+            const tableElem = $("#orderTable");
+            tableElem.empty();
+            tableElem.append(`<tr id="head">   
+            <td id ="imgColumn"></td>
+            <td>Item</td>
+            <td>Price</td>
+         </tr>`);
+            order.items.forEach((item)=>{
+                let price = item.price.toFixed(2);
+                tableElem.append(`<tr>
+                    <td><img src ="${item.imageSrc}"/></td>
+                    <td>${item.name}</td>
+                    <td class="price">$${price}</td>
+                    </tr>`);
+            });
+            tableElem.append(
+                `<tr>
+                    <td colspan="2" style="text-align: right">Order Total:</td>
+                    <td class="price">$${order.total.toFixed(2)}</td>
+                </tr>`
+            );
+        }
         
 
 }());

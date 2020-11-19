@@ -3,10 +3,10 @@ window.pcs.messageBox = (function () {
   "use strict";
 
   const offset = 30;
-  let leftOffset = -150;
-  let topOffset = -75;
-  const width = 300;
-  const height = 150;
+  let leftOffset = -250;
+  let topOffset = -150;
+  const width = 500;
+  const height = 250;
   let nextZindex = 1;
 
   const modalOverlay = document.createElement("div");
@@ -64,9 +64,10 @@ window.pcs.messageBox = (function () {
     messageBox.className = "messageBox";
 
     // probably should move this all to css file....
-    messageBox.style.backgroundColor = "blue";
-    messageBox.style.padding = "1em";
-    messageBox.style.paddingBottom = "38px";
+    messageBox.style.backgroundColor = "lightblue";
+    // messageBox.style.padding = "1em";
+    // messageBox.style.paddingBottom = "38px";
+    messageBox.style.paddingTop= "1em";
     messageBox.style.boxSizing = "border-box";
     messageBox.style.width = `${width}px`;
     messageBox.style.height = `${height}px`;
@@ -79,6 +80,7 @@ window.pcs.messageBox = (function () {
     messageBox.style.zIndex = nextZindex++;
     messageBox.style.verticalAlign = "middle";
     messageBox.style.textAlign ='center';
+    messageBox.style.fontSize ="2em";
 
     span.style.overflow = "auto";
     span.style.height = "100%";

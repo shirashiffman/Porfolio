@@ -66,8 +66,84 @@ nav {
   margin-top: -2em;
   position: absolute;
   right: 200px;
-  top: 70px;
+  top: 55px;
 }
+
+#form{
+  display: none;
+  background-color: white;
+  width: 50%;
+  position: absolute;
+  top: 95px;
+  border: 10px solid black;
+  left: 350px;
+  padding: 2em;
+  padding-bottom: 4em;
+  
+}
+#addressTo{
+  padding-left: 3em;
+}
+#header{
+  margin-top:0;
+  text-align: right;
+  padding: 0 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3em;
+  color: rgb(65, 64, 64);
+
+}
+#modal{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(169, 169, 169, 0.582);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#cancel, #order{
+  position: absolute;
+  bottom: -45px;
+  
+  width: 175px;
+  border-radius: 5px;
+  background-color: limegreen;
+
+}
+#order{
+  left: 150px;
+}
+#cancel{
+  right: 150px;
+}
+div.buttons{
+  position: relative;
+}
+table, tr, th, td{
+  border: 1px solid black;
+  padding: 0 4em ;
+  border-collapse: collapse;
+  margin: auto;
+  text-align: center;
+}
+table{
+  margin-top: 70px;
+}
+
+.price{
+  text-align: right;
+}
+
+label{
+  width: 75px;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: .5em;
+  margin-left: 4em;
+}
+
+
 @media screen and (max-width: 799px) {
   .menuItem div {
     width: 300px;
